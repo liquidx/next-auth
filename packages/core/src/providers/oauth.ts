@@ -54,7 +54,6 @@ interface AdvancedEndpointHandler<P extends UrlParams, C, R> {
 
 /**
  * Either an URL (containing all the parameters) or an object with more granular control.
- * @internal
  */
 export type EndpointHandler<
   P extends UrlParams,
