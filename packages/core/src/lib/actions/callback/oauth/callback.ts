@@ -54,10 +54,12 @@ export async function handleOAuth(
         "TODO: Authorization server did not provide a token endpoint."
       )
 
-    if (!discoveredAs.userinfo_endpoint)
-      throw new TypeError(
-        "TODO: Authorization server did not provide a userinfo endpoint."
-      )
+    // Apple to not provide a userinfo endpoint. Do not assert if this is
+    // missing since the userinfo endpoint isn't used in the code.
+    // if (!discoveredAs.userinfo_endpoint)
+    //   throw new TypeError(
+    //     "TODO: Authorization server did not provide a userinfo endpoint."
+    //   )
 
     as = discoveredAs
   } else {
